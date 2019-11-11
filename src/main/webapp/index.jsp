@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : 11 nov. 2019, 2:01:25
+    Created on : 11 nov. 2019, 13:23:49
     Author     : franciscoantonio
 --%>
 
@@ -9,16 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <%@include file="/INC/metas.inc"%>
-        <title>ObjetosDAOv1 - 1.0</title>
+        <title>ObjetosDAOv1</title>
     </head>
     <body>
             <form action="Controlador" method="post">
             
-                <label>Introduce número de alumnos: </label><input type="number" name="numero"></br>
-                <button type="submit" name="enviar" value="enviar"> Mostrar el número de alunmos introducidos
-                <button type="submit" name="all" value="alumnos">Mostrar todos los alumnos
-                <button type="submit" name="all" value="equipo">Mostrar alumnos y equipos
+            <label>Introduce número de alumnos: </label><input type="number" name="numero"></br>
+            <button type="submit" name="enviar" value="enviar"> Mostrar el número de alunmos introducidos
+            <button type="submit" name="all" value="alumnos">Mostrar todos los alumnos
+            <button type="submit" name="all" value="equipo">Mostrar alumnos y equipos
             
         </form>
     </body>

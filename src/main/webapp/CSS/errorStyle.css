@@ -8,3 +8,9 @@ and open the template in the editor.
     Author     : franciscoantonio
 */
 
+h1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: solid burlywood;
+}

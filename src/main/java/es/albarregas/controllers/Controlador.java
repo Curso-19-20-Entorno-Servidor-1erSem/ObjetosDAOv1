@@ -50,7 +50,6 @@ String cantidad = request.getParameter("numero");
                 } else {
                     IAlumnosDAO odao = new AlumnosDAO();
                     ArrayList<Alumno> alumnos = odao.getAlumnos(clausulaWhere);
-
                     request.setAttribute("alumnos", alumnos);
                     url = "JSP/listaAlumnos.jsp";
                 }

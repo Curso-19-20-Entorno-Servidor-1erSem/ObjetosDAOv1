@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <%@include file="/INC/metas.inc"%>
+        <%@include file="/INC/metas.inc"%>
         <title>Listado Alumnos.</title>
     </head>
     <body>

@@ -7,6 +7,7 @@ package es.albarregas.DAO;
 
 import es.albarregas.beans.Alumno;
 import es.albarregas.beans.Equipo;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -51,7 +52,7 @@ public class AlumnosDAO implements IAlumnosDAO{
     public ArrayList<Alumno> getAlumnosEquipo() {
         ArrayList<Alumno> lista = new ArrayList();
         String consulta = "Select a.nombre, a.grupo, e.marca, e.idEquipo from alumnos as a inner join equipos as e using(idEquipo)";
-        //Esto jamás en la vida me puede devolver un resultSet 
+        
         try {
             Statement sentencia = ConnectionFactory.getConnection().createStatement();
             ResultSet resultado = sentencia.executeQuery(consulta);
