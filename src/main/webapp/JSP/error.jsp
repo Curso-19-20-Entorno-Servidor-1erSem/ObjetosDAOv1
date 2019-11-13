@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/errorStyle.css">
         <%@include file="/INC/metas.inc"%>
         <title>Error......</title>
     </head>

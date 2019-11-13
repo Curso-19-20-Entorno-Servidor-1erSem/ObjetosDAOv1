@@ -7,7 +7,6 @@ package es.albarregas.DAO;
 
 import es.albarregas.beans.Alumno;
 import es.albarregas.beans.Equipo;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -21,7 +20,7 @@ public class AlumnosDAO implements IAlumnosDAO{
     public ArrayList<Alumno> getAlumnos(String limit) {
         ArrayList<Alumno> lista = new ArrayList();
         String consulta = "select nombre, grupo from alumnos " + limit;
-
+        //Esto jamás en la vida me puede devolver un resultSet
         try {
             Statement sentencia = ConnectionFactory.getConnection().createStatement();
             ResultSet resultado = sentencia.executeQuery(consulta);
@@ -36,11 +35,11 @@ public class AlumnosDAO implements IAlumnosDAO{
             resultado.close();
 
         } catch (SQLException ex) {
-            System.out.println("Error al ejecutar la sentenia.");
+            System.out.println("Error al ejecutar la sentecnia");
             ex.printStackTrace();
         }
 
-        return lista;
+        return lista;//no retorna nunca null porque ya he asignado un new ArrayList. En el controlador hay que preguntar si el arrayList está vacia
     }
 
     @Override
@@ -52,7 +51,7 @@ public class AlumnosDAO implements IAlumnosDAO{
     public ArrayList<Alumno> getAlumnosEquipo() {
         ArrayList<Alumno> lista = new ArrayList();
         String consulta = "Select a.nombre, a.grupo, e.marca, e.idEquipo from alumnos as a inner join equipos as e using(idEquipo)";
-        
+        //Esto jamás en la vida me puede devolver un resultSet 
         try {
             Statement sentencia = ConnectionFactory.getConnection().createStatement();
             ResultSet resultado = sentencia.executeQuery(consulta);
@@ -78,9 +77,6 @@ public class AlumnosDAO implements IAlumnosDAO{
         return lista;
     }
 
-  
-    public ArrayList<Alumno> getAlumnos() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+
 
 }

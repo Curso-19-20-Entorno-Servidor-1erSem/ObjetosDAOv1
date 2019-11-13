@@ -21,13 +21,15 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author franciscoantonio
  */
+
 @WebServlet(name = "Controlador", urlPatterns = {"/Controlador"})
 public class Controlador extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-String cantidad = request.getParameter("numero");
+        
+        String cantidad = request.getParameter("numero");
         String clausulaWhere = "";
         String url = "";
         boolean error = false;
